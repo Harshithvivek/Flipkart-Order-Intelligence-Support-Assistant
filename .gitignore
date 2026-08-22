@@ -9,4 +9,5 @@ models/*.pkl
 models/*.pt
 models/*.pth
 data/raw/
+data/fashion_mnist/
 *.log
