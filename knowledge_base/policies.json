@@ -1,0 +1,14 @@
+[
+  {"document_id":"D01","title":"Apparel returns","document_text":"Apparel items can be returned within 7 days of delivery when unused, unwashed, and accompanied by original tags and packaging."},
+  {"document_id":"D02","title":"Footwear returns","document_text":"Footwear can be returned within 7 days of delivery. The product should be unworn, with the original box, tags, and accessories intact."},
+  {"document_id":"D03","title":"Electronics returns","document_text":"Eligible electronics can be returned within 10 days of delivery for defects or damage. Serial numbers and original accessories must match the order."},
+  {"document_id":"D04","title":"Home returns","document_text":"Home and kitchen products may be returned within 10 days of delivery if unused and packed in the original condition. Some hygiene products are excluded."},
+  {"document_id":"D05","title":"Beauty returns","document_text":"Beauty products may be returned within 7 days only when unopened, unused, and sealed. Opened personal-care products are not eligible for return."},
+  {"document_id":"D06","title":"Books returns","document_text":"Books may be returned within 7 days of delivery when they are undamaged and have no writing, highlighting, or missing pages."},
+  {"document_id":"D07","title":"COD refund timeline","document_text":"For an approved cash-on-delivery return, the refund is initiated after quality checks and normally reaches the customer's bank account within 7 business days."},
+  {"document_id":"D08","title":"Prepaid refund timeline","document_text":"For an approved prepaid return, the refund is initiated after quality checks and is normally reflected within 5 to 7 business days, depending on the bank."},
+  {"document_id":"D09","title":"Delivery SLA","document_text":"The estimated delivery date shown at checkout is the delivery SLA for an order. Delays can occur because of weather, network disruption, or address issues."},
+  {"document_id":"D10","title":"Reverse pickup eligibility","document_text":"Reverse pickup is available for eligible pin codes and products. The item must be packed securely and meet the relevant return-condition requirements."},
+  {"document_id":"D11","title":"Replacement policy","document_text":"A replacement may be offered for an eligible damaged, defective, or incorrect item when stock is available. The request must be raised within the applicable return window."},
+  {"document_id":"D12","title":"Non-returnable products","document_text":"Products marked non-returnable on the product page cannot be returned unless they arrive damaged, defective, or incorrect. Hygiene and personalized items may have additional exclusions."}
+]
