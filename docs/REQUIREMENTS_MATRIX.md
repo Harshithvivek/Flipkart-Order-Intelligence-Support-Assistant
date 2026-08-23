@@ -5,7 +5,7 @@ This matrix is derived from the supplied capstone brief. `BLOCKED` means the bri
 | ID | Requirement | Part | Implementation File | Verification Method | Status |
 |---|---|---|---|---|---|
 | R01 | Deterministic order dataset with `N=6000` and `np.random.default_rng(42)` | 1 | `generate_orders.py` | Run generator; inspect shape and seed behavior | PASS |
-| R02 | Use the exact specified category list, category probabilities, payment methods, payment probabilities, and generation logic | 1 | `generate_orders.py` | Compare constants and generated output with full source specification | BLOCKED: exact generator block absent from supplied attachment |
+| R02 | Use the exact specified category list, category probabilities, payment methods, payment probabilities, and generation logic | 1 | `generate_orders.py` | Compare constants and generated output with recovered reference specification | PASS |
 | R03 | Dataset has exactly 13 columns and saved as `orders_dataset.csv` | 1 | `generate_orders.py` | Pandas shape check | PASS |
 | R04 | Report return rate, rating missingness, category return rates, payment return rates | 1 | `part1_return_risk/evaluate_return_risk.py` | Execute evaluation report | PASS: reports generated |
 | R05 | Classify missingness as MAR using observed payment method and measure COD/non-COD gap | 1 | `part1_return_risk/analyze_return_risk.py` | Execute missingness analysis | PASS: MAR; gap 0.183144 |
@@ -44,4 +44,4 @@ This matrix is derived from the supplied capstone brief. `BLOCKED` means the bri
 
 ## Initialization Note
 
-The supplied attachment references an earlier full specification but does not contain the promised exact order-generator code/constants. R02 therefore remains blocked until that source block is supplied. The initial generator is intentionally marked provisional; no downstream model claim should treat it as the required final dataset until R02 is resolved.
+The exact generator block was recovered from the reference repository and applied. Part 1 artifacts were regenerated after this change.

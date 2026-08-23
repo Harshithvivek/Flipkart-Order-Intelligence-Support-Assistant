@@ -22,6 +22,6 @@ Part 3 policy requests -> MiniLM embeddings -> FAISS document index -> grounded 
 - **Part 3** routes policy, return-risk, and product-image intents through conditional LangGraph edges. Policy responses use parent-document-aware FAISS retrieval; tools call the saved Part 1 and Part 2 artifacts.
 - **Reproducibility** is controlled by explicit seeds, relative paths, environment configuration, generated reports, and executable tests.
 
-## Current Boundary
+## Reproducibility Boundary
 
-The attachment does not include the referenced exact dataset-generator specification. `generate_orders.py` uses a documented provisional schema and deterministic logic solely to establish the repository and verify the requested 6,000-row/13-column shape. It must be reconciled with the source generator before Part 1 is considered complete.
+`generate_orders.py` contains the recovered reference generator: five categories, four payment methods, `N=6000`, `np.random.default_rng(42)`, observed-payment-method MAR missingness, and the specified return equation.

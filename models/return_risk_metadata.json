@@ -1,18 +1,18 @@
 {
-  "rf_threshold": 0.5299999999999998,
+  "rf_threshold": 0.46999999999999986,
   "threshold_definition": "F1-maximizing held-out test threshold",
   "model_path": "models\\return_risk_model.pkl",
   "feature_columns": [
     "product_category",
-    "payment_method",
     "price_inr",
     "discount_pct",
+    "payment_method",
     "customer_tenure_days",
+    "num_previous_orders",
     "num_previous_returns",
+    "delivery_distance_km",
     "delivery_days",
-    "quantity",
-    "customer_age",
-    "order_value_inr",
+    "is_weekend_order",
     "customer_rating"
   ]
 }

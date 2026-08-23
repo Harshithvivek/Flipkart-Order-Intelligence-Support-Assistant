@@ -2,112 +2,95 @@
   "missingness": {
     "classification": "MAR",
     "reason": "customer_rating missingness depends on observed payment_method",
-    "cod_rate": 0.26371511068334935,
-    "non_cod_rate": 0.08057113717491075
+    "cod_rate": 0.22830867652938824,
+    "non_cod_rate": 0.06058873963989711
   },
   "impurity_top_5": {
-    "categorical__payment_method_COD": 0.16669034659149778,
-    "numeric__discount_pct": 0.12031116076236265,
-    "numeric__price_inr": 0.09030035465553825,
-    "numeric__customer_tenure_days": 0.08724603407184656,
-    "numeric__num_previous_returns": 0.08707597645657503
+    "categorical__payment_method_COD": 0.16735120108439122,
+    "numeric__price_inr": 0.13839486802650036,
+    "numeric__customer_tenure_days": 0.10051796085894527,
+    "numeric__delivery_distance_km": 0.09821637284416254,
+    "numeric__discount_pct": 0.09191120455009465
   },
   "impurity_top_5_original_features": {
-    "payment_method": 0.24936188579119878,
-    "discount_pct": 0.12031116076236265,
-    "price_inr": 0.09030035465553825,
-    "customer_tenure_days": 0.08724603407184656,
-    "num_previous_returns": 0.08707597645657503
+    "payment_method": 0.25457673157353694,
+    "price_inr": 0.13839486802650036,
+    "customer_tenure_days": 0.10051796085894527,
+    "delivery_distance_km": 0.09821637284416254,
+    "discount_pct": 0.09191120455009465
   },
   "permutation_top_5_original_features": {
-    "payment_method": 0.1035113277144516,
-    "num_previous_returns": 0.013135928515487194,
-    "discount_pct": 0.00657668880944372,
-    "delivery_days": 0.00269446619946363,
-    "product_category": 0.0024079762692195026
+    "payment_method": 0.09912277582180502,
+    "price_inr": 0.009250368473669491,
+    "num_previous_returns": 0.007799787411437919,
+    "product_category": 0.00476150961587859,
+    "delivery_days": 0.0013359887146295213
   },
   "importance_comparison": {
     "impurity_features_not_in_permutation_top_5": [
       "customer_tenure_days",
-      "price_inr"
+      "delivery_distance_km",
+      "discount_pct"
     ],
     "interpretation": "Impurity importance can overrate noisy continuous variables because tree splits reuse many candidate cut points; held-out permutation importance measures the drop in predictive performance after shuffling an original feature."
   },
   "subgroups": {
     "product_category": [
       {
-        "product_category": "Beauty",
-        "count": 133,
-        "precision": 0.24390243902439024,
-        "recall": 0.3448275862068966
+        "product_category": "Apparel",
+        "count": 385,
+        "precision": 0.2978723404255319,
+        "recall": 0.56
       },
       {
-        "product_category": "Books",
-        "count": 118,
-        "precision": 0.3939393939393939,
-        "recall": 0.48148148148148145
+        "product_category": "Beauty",
+        "count": 116,
+        "precision": 0.4418604651162791,
+        "recall": 0.6129032258064516
       },
       {
         "product_category": "Electronics",
-        "count": 232,
-        "precision": 0.3170731707317073,
-        "recall": 0.30952380952380953
-      },
-      {
-        "product_category": "Fashion",
-        "count": 238,
-        "precision": 0.3466666666666667,
-        "recall": 0.5416666666666666
+        "count": 261,
+        "precision": 0.2976190476190476,
+        "recall": 0.4807692307692308
       },
       {
         "product_category": "Footwear",
-        "count": 165,
-        "precision": 0.46511627906976744,
-        "recall": 0.4878048780487805
-      },
-      {
-        "product_category": "Grocery",
-        "count": 115,
-        "precision": 0.40476190476190477,
-        "recall": 0.6071428571428571
+        "count": 217,
+        "precision": 0.3723404255319149,
+        "recall": 0.625
       },
       {
         "product_category": "Home",
-        "count": 199,
-        "precision": 0.35135135135135137,
-        "recall": 0.5416666666666666
+        "count": 221,
+        "precision": 0.23076923076923078,
+        "recall": 0.7058823529411765
       }
     ],
     "payment_method": [
       {
         "payment_method": "COD",
-        "count": 437,
-        "precision": 0.3668639053254438,
-        "recall": 0.8732394366197183
+        "count": 503,
+        "precision": 0.32119914346895073,
+        "recall": 0.967741935483871
       },
       {
-        "payment_method": "Credit Card",
-        "count": 240,
-        "precision": 0.0,
-        "recall": 0.0
+        "payment_method": "Prepaid_Card",
+        "count": 283,
+        "precision": 0.2,
+        "recall": 0.04081632653061224
       },
       {
-        "payment_method": "Debit Card",
-        "count": 170,
-        "precision": 0.0,
-        "recall": 0.0
-      },
-      {
-        "payment_method": "UPI",
-        "count": 281,
-        "precision": 0.1111111111111111,
-        "recall": 0.02040816326530612
+        "payment_method": "Prepaid_UPI",
+        "count": 294,
+        "precision": 0.2777777777777778,
+        "recall": 0.10416666666666667
       },
       {
         "payment_method": "Wallet",
-        "count": 72,
-        "precision": 0.0,
-        "recall": 0.0
+        "count": 120,
+        "precision": 0.1111111111111111,
+        "recall": 0.09523809523809523
       }
     ]
   },

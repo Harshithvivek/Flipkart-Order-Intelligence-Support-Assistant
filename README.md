@@ -6,7 +6,7 @@ A reproducible three-part capstone combining return-risk machine learning, Fashi
 
 Part 1 is implemented and Part 2 is complete. The corrected Part 2 run used CUDA, reached 91.74% Stage A validation accuracy, and achieved 90.83% accuracy on the untouched 10,000-image test set. The support-agent foundation and actual FAISS retrieval/transcript checks are also complete.
 
-See [docs/REQUIREMENTS_MATRIX.md](docs/REQUIREMENTS_MATRIX.md) and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). The exact order-generator block referenced by the brief was not included in the supplied attachment, so the deterministic Part 1 generator is explicitly provisional.
+See [docs/REQUIREMENTS_MATRIX.md](docs/REQUIREMENTS_MATRIX.md) and [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). The deterministic Part 1 generator matches the recovered reference specification.
 
 ## Initial Command
 
@@ -28,7 +28,7 @@ The default agent mode is `MOCK_LLM`; it requires no API key or paid service. Bu
 
 ## Part 1 Results
 
-The generated dataset contains 6,000 rows and 13 columns. The observed return rate is 0.2190, the rating missingness is MAR, and the COD versus non-COD missingness gap is 0.183144. The DummyClassifier has accuracy 0.78083 and returned-class F1 0.0. Random Forest CV ROC-AUC is 0.62552, held-out ROC-AUC is 0.63665, and the RF-specific threshold `t*_rf` is 0.53.
+The generated dataset contains 6,000 rows and 13 columns. The observed return rate is 0.2275, rating missingness is MAR, and the COD versus non-COD missingness gap is 16.77 percentage points. The DummyClassifier has accuracy 0.78083 and returned-class F1 0.0. Random Forest CV ROC-AUC is 0.61797, held-out ROC-AUC is 0.61755, and the RF-specific threshold `t*_rf` is 0.47.
 
 ## Verified Results
 
