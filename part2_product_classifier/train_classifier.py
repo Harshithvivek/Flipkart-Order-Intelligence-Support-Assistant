@@ -143,7 +143,9 @@ def main() -> dict:
             logging.info("stage_a epoch=%d/%d val_accuracy=%.4f", epoch + 1, head_epochs, evaluate_head(head, validation_cache, device))
     stage_a_accuracy = evaluate_head(head, validation_cache, device)
 
-    final_model = build_backbone(pretrained=False)
+    # The head was trained on features from the pretrained backbone, so the
+    # saved frozen-backbone model must use the same pretrained weights.
+    final_model = build_backbone(pretrained=True)
     final_model.fc = head.cpu()
     fine_tuned = False
     stage_b_accuracy = None

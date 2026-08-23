@@ -20,9 +20,9 @@ This matrix is derived from the supplied capstone brief. `BLOCKED` means the bri
 | R14 | Sweep RF probabilities and save actual `t*_rf` to machine-readable metadata | 1 | `part1_return_risk/train_return_risk.py` | Metadata inspection | NOT STARTED |
 | R15 | Fashion-MNIST 60,000/10,000 split with stratified validation >=5,000 | 2 | `part2_product_classifier/train_classifier.py`, `verify_splits.py` | Dataset/split report | IN PROGRESS |
 | R16 | Grayscale-to-three-channel resize and ImageNet normalization | 2 | `part2_product_classifier/train_classifier.py`, `predict.py` | Transform inspection | IN PROGRESS |
-| R17 | Pretrained ResNet-18 transfer learning with frozen backbone, Adam, documented configuration, and feature cache | 2 | `part2_product_classifier/train_classifier.py` | Training logs/artifacts | IN PROGRESS |
+| R17 | Pretrained ResNet-18 transfer learning with frozen backbone, Adam, documented configuration, and feature cache | 2 | `part2_product_classifier/train_classifier.py` | Training logs/artifacts | IN PROGRESS: Stage A verified; corrected checkpoint pending rerun |
 | R18 | Fine-tune late layers only if validation accuracy is below 80%; report before/after actual values | 2 | `part2_product_classifier/train_classifier.py` | Training report | IN PROGRESS |
-| R19 | Untouched test evaluation with accuracy, 10x10 confusion matrix, per-class metrics, and actual confusion pairs | 2 | `part2_product_classifier/evaluate.py` | Evaluation report | NOT STARTED: rebuild pending execution |
+| R19 | Untouched test evaluation with accuracy, 10x10 confusion matrix, per-class metrics, and actual confusion pairs | 2 | `part2_product_classifier/evaluate.py` | Evaluation report | BLOCKED: prior 0.169 report invalidated by random-backbone checkpoint bug |
 | R20 | Save reusable classifier to `models/product_classifier.pt` with `load_product_classifier()` and `predict_product_image()` | 2 | `part2_product_classifier/predict.py` | Model loading/prediction tests | IN PROGRESS |
 | R21 | Export >=5 real Fashion-MNIST test images under `data/sample_images/` | 2 | `part2_product_classifier/export_samples.py` | File provenance check | NOT STARTED: rebuild pending execution |
 | R22 | At least 12 policy documents, required coverage, and retained document/chunk IDs | 3 | `knowledge_base/policies.json` | KB validation | NOT STARTED |
