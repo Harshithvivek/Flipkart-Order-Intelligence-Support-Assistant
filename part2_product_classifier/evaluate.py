@@ -23,12 +23,13 @@ def main() -> dict:
         raise FileNotFoundError(f"Saved product classifier not found: {MODEL_PATH}")
     test_set = datasets.FashionMNIST(ROOT, train=False, download=True, transform=TRANSFORM)
     raw_test_set = datasets.FashionMNIST(ROOT, train=False, download=False)
-    model = load_model(str(MODEL_PATH))
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model = load_model(str(MODEL_PATH), device=device)
     loader = DataLoader(test_set, batch_size=512, shuffle=False, num_workers=0)
     predictions, labels = [], []
     with torch.inference_mode():
         for images, batch_labels in loader:
-            predictions.extend(model(images).argmax(1).tolist())
+            predictions.extend(model(images.to(device)).argmax(1).cpu().tolist())
             labels.extend(batch_labels.tolist())
     matrix = confusion_matrix(labels, predictions, labels=list(range(10)))
     class_report = classification_report(

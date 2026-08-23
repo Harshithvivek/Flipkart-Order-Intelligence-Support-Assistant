@@ -5,7 +5,11 @@ from pathlib import Path
 import torchvision
 from PIL import Image
 
-from part2_product_classifier.train_classifier import CLASSES, ROOT
+CLASSES = [
+    "T-shirt/top", "Trouser", "Pullover", "Dress", "Coat",
+    "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot",
+]
+ROOT = Path("data/fashion_mnist")
 
 OUTPUT_DIR = Path("data/sample_images")
 
