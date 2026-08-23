@@ -8,6 +8,6 @@
   "setup_response": {
     "answer": "The estimated return probability is 0.58, classified as Medium risk.",
     "source": "return_risk_tool",
-    "confidence": 0.5801156976393079
+    "confidence": 0.5801156976393083
   }
 }
