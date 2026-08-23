@@ -1,0 +1,21 @@
+{
+  "device": "cuda",
+  "quick_test": false,
+  "train_size": 55000,
+  "validation_size": 5000,
+  "test_size": 10000,
+  "full_test_size": 10000,
+  "stage_a_validation_accuracy": 0.9174,
+  "stage_b_fine_tuned": false,
+  "stage_b_validation_accuracy": null,
+  "head_epochs": 25,
+  "optimizer": "Adam",
+  "head_learning_rate": 0.001,
+  "fine_tune_learning_rate": 0.0001,
+  "frozen_layers": "backbone during Stage A; layer1/layer2 during Stage B",
+  "cache_files": [
+    "artifacts/fashion_train_features.pt",
+    "artifacts/fashion_validation_features.pt"
+  ],
+  "checkpoint": "models/product_classifier.pt"
+}
