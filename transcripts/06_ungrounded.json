@@ -1,0 +1,8 @@
+{
+  "user": "Can I book an international flight?",
+  "response": {
+    "answer": "I don't have enough information in the policy knowledge base to answer that reliably.",
+    "source": "policy_kb",
+    "confidence": 0.0
+  }
+}

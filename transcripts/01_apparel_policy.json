@@ -1,0 +1,8 @@
+{
+  "user": "What is the return window for apparel?",
+  "response": {
+    "answer": "Apparel items can be returned within 7 days of delivery when unused, unwashed, and accompanied by original tags and packaging. (Source: D01)",
+    "source": "policy_kb",
+    "confidence": 0.5874038934707642
+  }
+}

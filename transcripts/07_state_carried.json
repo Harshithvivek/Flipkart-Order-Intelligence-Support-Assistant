@@ -1,0 +1,13 @@
+{
+  "user": "Which order did we assess?",
+  "response": {
+    "answer": "The order currently in context is ORD-777.",
+    "source": "return_risk_tool",
+    "confidence": 1.0
+  },
+  "setup_response": {
+    "answer": "The estimated return probability is 0.58, classified as Medium risk.",
+    "source": "return_risk_tool",
+    "confidence": 0.5801156976393079
+  }
+}

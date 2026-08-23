@@ -1,0 +1,8 @@
+{
+  "user": "Which order did we assess?",
+  "response": {
+    "answer": "There is no order in the current conversation context.",
+    "source": "policy_kb",
+    "confidence": 1.0
+  }
+}

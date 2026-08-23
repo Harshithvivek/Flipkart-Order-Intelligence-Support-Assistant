@@ -1,0 +1,8 @@
+{
+  "user": "What is the delivery SLA?",
+  "response": {
+    "answer": "The estimated delivery date shown at checkout is the delivery SLA for an order. Delays can occur because of weather, network disruption, or address issues. (Source: D09)",
+    "source": "policy_kb",
+    "confidence": 0.6537749767303467
+  }
+}

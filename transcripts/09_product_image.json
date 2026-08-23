@@ -1,0 +1,9 @@
+{
+  "user": "Classify this product image",
+  "response": {
+    "answer": "The image is classified as T-shirt/top with 0.51 confidence.",
+    "source": "image_classifier_tool",
+    "confidence": 0.5106
+  },
+  "image_path": "data\\sample_images\\00000_ankle_boot.png"
+}

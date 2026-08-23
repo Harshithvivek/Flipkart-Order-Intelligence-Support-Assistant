@@ -1,0 +1,179 @@
+{
+  "embedding_model": "all-MiniLM-L6-v2",
+  "document_level": true,
+  "queries": [
+    {
+      "query": "How many days can I return footwear?",
+      "relevant_documents": [
+        "D02"
+      ],
+      "retrieved_documents": [
+        "D02",
+        "D01",
+        "D05"
+      ],
+      "hits": [
+        {
+          "document_id": "D02",
+          "document_text": "Footwear can be returned within 7 days of delivery. The product should be unworn, with the original box, tags, and accessories intact.",
+          "chunk_id": "D02_C01",
+          "score": 0.8085452318191528
+        },
+        {
+          "document_id": "D01",
+          "document_text": "Apparel items can be returned within 7 days of delivery when unused, unwashed, and accompanied by original tags and packaging.",
+          "chunk_id": "D01_C01",
+          "score": 0.6064436435699463
+        },
+        {
+          "document_id": "D05",
+          "document_text": "Beauty products may be returned within 7 days only when unopened, unused, and sealed. Opened personal-care products are not eligible for return.",
+          "chunk_id": "D05_C01",
+          "score": 0.5331002473831177
+        }
+      ],
+      "precision_at_3": 0.3333333333333333,
+      "recall_at_3": 1.0,
+      "arithmetic": "Precision@3=1/3=0.333; Recall@3=1/1=1.000"
+    },
+    {
+      "query": "How long does a COD refund take?",
+      "relevant_documents": [
+        "D07"
+      ],
+      "retrieved_documents": [
+        "D08",
+        "D07",
+        "D03"
+      ],
+      "hits": [
+        {
+          "document_id": "D08",
+          "document_text": "For an approved prepaid return, the refund is initiated after quality checks and is normally reflected within 5 to 7 business days, depending on the bank.",
+          "chunk_id": "D08_C01",
+          "score": 0.5866273641586304
+        },
+        {
+          "document_id": "D07",
+          "document_text": "For an approved cash-on-delivery return, the refund is initiated after quality checks and normally reaches the customer's bank account within 7 business days.",
+          "chunk_id": "D07_C01",
+          "score": 0.5746365785598755
+        },
+        {
+          "document_id": "D03",
+          "document_text": "Eligible electronics can be returned within 10 days of delivery for defects or damage. Serial numbers and original accessories must match the order.",
+          "chunk_id": "D03_C01",
+          "score": 0.40642571449279785
+        }
+      ],
+      "precision_at_3": 0.3333333333333333,
+      "recall_at_3": 1.0,
+      "arithmetic": "Precision@3=1/3=0.333; Recall@3=1/1=1.000"
+    },
+    {
+      "query": "Can I return an electronics item?",
+      "relevant_documents": [
+        "D03",
+        "D12"
+      ],
+      "retrieved_documents": [
+        "D03",
+        "D12",
+        "D11"
+      ],
+      "hits": [
+        {
+          "document_id": "D03",
+          "document_text": "Eligible electronics can be returned within 10 days of delivery for defects or damage. Serial numbers and original accessories must match the order.",
+          "chunk_id": "D03_C01",
+          "score": 0.7294532656669617
+        },
+        {
+          "document_id": "D12",
+          "document_text": "Products marked non-returnable on the product page cannot be returned unless they arrive damaged, defective, or incorrect. Hygiene and personalized items may have additional exclusions.",
+          "chunk_id": "D12_C01",
+          "score": 0.6007634401321411
+        },
+        {
+          "document_id": "D11",
+          "document_text": "A replacement may be offered for an eligible damaged, defective, or incorrect item when stock is available. The request must be raised within the applicable return window.",
+          "chunk_id": "D11_C01",
+          "score": 0.5198035836219788
+        }
+      ],
+      "precision_at_3": 0.6666666666666666,
+      "recall_at_3": 1.0,
+      "arithmetic": "Precision@3=2/3=0.667; Recall@3=2/2=1.000"
+    },
+    {
+      "query": "Is reverse pickup available?",
+      "relevant_documents": [
+        "D10"
+      ],
+      "retrieved_documents": [
+        "D10",
+        "D12",
+        "D11"
+      ],
+      "hits": [
+        {
+          "document_id": "D10",
+          "document_text": "Reverse pickup is available for eligible pin codes and products. The item must be packed securely and meet the relevant return-condition requirements.",
+          "chunk_id": "D10_C01",
+          "score": 0.7705599665641785
+        },
+        {
+          "document_id": "D12",
+          "document_text": "Products marked non-returnable on the product page cannot be returned unless they arrive damaged, defective, or incorrect. Hygiene and personalized items may have additional exclusions.",
+          "chunk_id": "D12_C01",
+          "score": 0.22223392128944397
+        },
+        {
+          "document_id": "D11",
+          "document_text": "A replacement may be offered for an eligible damaged, defective, or incorrect item when stock is available. The request must be raised within the applicable return window.",
+          "chunk_id": "D11_C01",
+          "score": 0.20823010802268982
+        }
+      ],
+      "precision_at_3": 0.3333333333333333,
+      "recall_at_3": 1.0,
+      "arithmetic": "Precision@3=1/3=0.333; Recall@3=1/1=1.000"
+    },
+    {
+      "query": "What is the delivery SLA?",
+      "relevant_documents": [
+        "D09"
+      ],
+      "retrieved_documents": [
+        "D09",
+        "D06",
+        "D03"
+      ],
+      "hits": [
+        {
+          "document_id": "D09",
+          "document_text": "The estimated delivery date shown at checkout is the delivery SLA for an order. Delays can occur because of weather, network disruption, or address issues.",
+          "chunk_id": "D09_C01",
+          "score": 0.6537749767303467
+        },
+        {
+          "document_id": "D06",
+          "document_text": "Books may be returned within 7 days of delivery when they are undamaged and have no writing, highlighting, or missing pages.",
+          "chunk_id": "D06_C01",
+          "score": 0.20154473185539246
+        },
+        {
+          "document_id": "D03",
+          "document_text": "Eligible electronics can be returned within 10 days of delivery for defects or damage. Serial numbers and original accessories must match the order.",
+          "chunk_id": "D03_C01",
+          "score": 0.18796849250793457
+        }
+      ],
+      "precision_at_3": 0.3333333333333333,
+      "recall_at_3": 1.0,
+      "arithmetic": "Precision@3=1/3=0.333; Recall@3=1/1=1.000"
+    }
+  ],
+  "average_precision_at_3": 0.4,
+  "average_recall_at_3": 1.0
+}
