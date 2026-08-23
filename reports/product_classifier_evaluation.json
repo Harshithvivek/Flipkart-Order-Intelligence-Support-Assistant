@@ -1,215 +1,216 @@
 {
+  "device": "cuda",
   "test_size": 10000,
-  "accuracy": 0.169,
+  "accuracy": 0.9083,
   "confusion_matrix": [
     [
-      905,
+      829,
+      3,
+      15,
+      26,
+      4,
       0,
+      116,
       0,
+      6,
+      1
+    ],
+    [
+      4,
+      977,
+      1,
+      12,
+      2,
       0,
+      3,
       0,
-      95,
-      0,
-      0,
-      0,
+      1,
       0
     ],
     [
-      961,
+      17,
       0,
+      870,
+      8,
+      55,
       0,
+      49,
       0,
-      0,
-      39,
-      0,
-      0,
-      0,
+      1,
       0
     ],
     [
-      946,
+      8,
+      11,
+      10,
+      895,
+      35,
       0,
+      40,
       0,
-      0,
-      0,
-      54,
-      0,
-      0,
-      0,
+      1,
       0
     ],
     [
-      875,
+      1,
       0,
+      35,
+      21,
+      878,
       0,
+      62,
       0,
-      0,
-      125,
-      0,
-      0,
-      0,
+      3,
       0
     ],
     [
-      962,
       0,
       0,
       0,
+      0,
+      0,
+      956,
+      0,
+      31,
+      2,
+      11
+    ],
+    [
+      78,
+      0,
+      37,
+      33,
+      79,
+      0,
+      769,
+      0,
+      4,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      7,
+      0,
+      968,
+      0,
+      25
+    ],
+    [
+      1,
+      0,
+      1,
+      2,
+      0,
+      0,
+      7,
+      0,
+      989,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      0,
+      9,
       0,
       38,
       0,
-      0,
-      0,
-      0
-    ],
-    [
-      215,
-      0,
-      0,
-      0,
-      0,
-      785,
-      0,
-      0,
-      0,
-      0
-    ],
-    [
-      887,
-      0,
-      0,
-      0,
-      0,
-      113,
-      0,
-      0,
-      0,
-      0
-    ],
-    [
-      297,
-      0,
-      0,
-      0,
-      0,
-      703,
-      0,
-      0,
-      0,
-      0
-    ],
-    [
-      923,
-      0,
-      0,
-      0,
-      0,
-      77,
-      0,
-      0,
-      0,
-      0
-    ],
-    [
-      935,
-      0,
-      0,
-      0,
-      0,
-      65,
-      0,
-      0,
-      0,
-      0
+      952
     ]
   ],
   "per_class": {
     "T-shirt/top": {
-      "precision": 0.11447002276751835,
-      "recall": 0.905,
-      "f1-score": 0.20323377498315742,
+      "precision": 0.8837953091684435,
+      "recall": 0.829,
+      "f1-score": 0.8555211558307534,
       "support": 1000.0
     },
     "Trouser": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1-score": 0.0,
+      "precision": 0.9858728557013118,
+      "recall": 0.977,
+      "f1-score": 0.9814163736815671,
       "support": 1000.0
     },
     "Pullover": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1-score": 0.0,
+      "precision": 0.8978328173374613,
+      "recall": 0.87,
+      "f1-score": 0.8836973082783138,
       "support": 1000.0
     },
     "Dress": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1-score": 0.0,
+      "precision": 0.8967935871743486,
+      "recall": 0.895,
+      "f1-score": 0.8958958958958959,
       "support": 1000.0
     },
     "Coat": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1-score": 0.0,
+      "precision": 0.8338081671415005,
+      "recall": 0.878,
+      "f1-score": 0.8553336580613736,
       "support": 1000.0
     },
     "Sandal": {
-      "precision": 0.3748806112702961,
-      "recall": 0.785,
-      "f1-score": 0.5074337427278603,
+      "precision": 0.9835390946502057,
+      "recall": 0.956,
+      "f1-score": 0.9695740365111561,
       "support": 1000.0
     },
     "Shirt": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1-score": 0.0,
+      "precision": 0.7351816443594646,
+      "recall": 0.769,
+      "f1-score": 0.7517106549364614,
       "support": 1000.0
     },
     "Sneaker": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1-score": 0.0,
+      "precision": 0.9334619093539055,
+      "recall": 0.968,
+      "f1-score": 0.9504172803141875,
       "support": 1000.0
     },
     "Bag": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1-score": 0.0,
+      "precision": 0.9821251241310824,
+      "recall": 0.989,
+      "f1-score": 0.9855505729945192,
       "support": 1000.0
     },
     "Ankle boot": {
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1-score": 0.0,
+      "precision": 0.9625884732052579,
+      "recall": 0.952,
+      "f1-score": 0.9572649572649573,
       "support": 1000.0
     }
   },
   "highest_confusion_pairs": [
     {
-      "count": 962,
+      "count": 116,
+      "actual": "T-shirt/top",
+      "predicted": "Shirt"
+    },
+    {
+      "count": 79,
+      "actual": "Shirt",
+      "predicted": "Coat"
+    },
+    {
+      "count": 78,
+      "actual": "Shirt",
+      "predicted": "T-shirt/top"
+    },
+    {
+      "count": 62,
       "actual": "Coat",
-      "predicted": "T-shirt/top"
+      "predicted": "Shirt"
     },
     {
-      "count": 961,
-      "actual": "Trouser",
-      "predicted": "T-shirt/top"
-    },
-    {
-      "count": 946,
+      "count": 55,
       "actual": "Pullover",
-      "predicted": "T-shirt/top"
-    },
-    {
-      "count": 935,
-      "actual": "Ankle boot",
-      "predicted": "T-shirt/top"
-    },
-    {
-      "count": 923,
-      "actual": "Bag",
-      "predicted": "T-shirt/top"
+      "predicted": "Coat"
     }
   ],
   "sample_images": [
