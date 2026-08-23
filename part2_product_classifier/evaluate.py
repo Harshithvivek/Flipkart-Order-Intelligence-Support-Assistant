@@ -24,6 +24,7 @@ def main() -> dict:
     test_set = datasets.FashionMNIST(ROOT, train=False, download=True, transform=TRANSFORM)
     raw_test_set = datasets.FashionMNIST(ROOT, train=False, download=False)
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    print(f"evaluation_device={device}")
     model = load_model(str(MODEL_PATH), device=device)
     loader = DataLoader(test_set, batch_size=512, shuffle=False, num_workers=0)
     predictions, labels = [], []
@@ -56,6 +57,7 @@ def main() -> dict:
         if len(seen) == len(CLASSES):
             break
     result = {
+        "device": device,
         "test_size": len(test_set),
         "accuracy": float(accuracy_score(labels, predictions)),
         "confusion_matrix": matrix.tolist(),
