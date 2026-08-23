@@ -7,17 +7,17 @@ This matrix is derived from the supplied capstone brief. `BLOCKED` means the bri
 | R01 | Deterministic order dataset with `N=6000` and `np.random.default_rng(42)` | 1 | `generate_orders.py` | Run generator; inspect shape and seed behavior | PASS |
 | R02 | Use the exact specified category list, category probabilities, payment methods, payment probabilities, and generation logic | 1 | `generate_orders.py` | Compare constants and generated output with full source specification | BLOCKED: exact generator block absent from supplied attachment |
 | R03 | Dataset has exactly 13 columns and saved as `orders_dataset.csv` | 1 | `generate_orders.py` | Pandas shape check | PASS |
-| R04 | Report return rate, rating missingness, category return rates, payment return rates | 1 | `part1_return_risk/evaluate_return_risk.py` | Execute evaluation report | NOT STARTED |
-| R05 | Classify missingness as MAR using observed payment method and measure COD/non-COD gap | 1 | `part1_return_risk/analyze_return_risk.py` | Execute missingness analysis | NOT STARTED |
-| R06 | 80/20 stratified split with `random_state=42` | 1 | `part1_return_risk/train_return_risk.py` | Inspect training run | NOT STARTED |
-| R07 | Leakage-safe `ColumnTransformer` with median numeric imputation, scaling, categorical most-frequent imputation, and one-hot encoding | 1 | `part1_return_risk/utils.py` | Pipeline inspection and test | NOT STARTED |
-| R08 | Dummy most-frequent baseline with accuracy and returned-class F1; discuss imbalance and zero recall | 1 | `part1_return_risk/train_return_risk.py` | Training report | NOT STARTED |
-| R09 | Balanced logistic regression, threshold-0.5 metrics, and 0.10-0.90 sweep at <=0.02 steps | 1 | `part1_return_risk/train_return_risk.py` | Training report | NOT STARTED |
-| R10 | Balanced random forest with GridSearchCV, required grid, ROC-AUC scoring, and 5-fold StratifiedKFold | 1 | `part1_return_risk/train_return_risk.py` | CV/test report | NOT STARTED |
-| R11 | Compare impurity and held-out permutation importance; report top five and required features | 1 | `part1_return_risk/analyze_return_risk.py` | Importance report | NOT STARTED |
-| R12 | Subgroup precision/recall by category and payment method; identify weak subgroup and concrete remedy | 1 | `part1_return_risk/analyze_return_risk.py` | Subgroup report | NOT STARTED |
-| R13 | Save final fitted tuned RF pipeline to `models/return_risk_model.pkl` | 1 | `part1_return_risk/train_return_risk.py` | Load artifact test | NOT STARTED |
-| R14 | Sweep RF probabilities and save actual `t*_rf` to machine-readable metadata | 1 | `part1_return_risk/train_return_risk.py` | Metadata inspection | NOT STARTED |
+| R04 | Report return rate, rating missingness, category return rates, payment return rates | 1 | `part1_return_risk/evaluate_return_risk.py` | Execute evaluation report | PASS: reports generated |
+| R05 | Classify missingness as MAR using observed payment method and measure COD/non-COD gap | 1 | `part1_return_risk/analyze_return_risk.py` | Execute missingness analysis | PASS: MAR; gap 0.183144 |
+| R06 | 80/20 stratified split with `random_state=42` | 1 | `part1_return_risk/train_return_risk.py` | Training execution | PASS |
+| R07 | Leakage-safe `ColumnTransformer` with median numeric imputation, scaling, categorical most-frequent imputation, and one-hot encoding | 1 | `part1_return_risk/utils.py` | Pipeline inspection/test | PASS |
+| R08 | Dummy most-frequent baseline with accuracy and returned-class F1; discuss imbalance and zero recall | 1 | `part1_return_risk/train_return_risk.py` | Training report | PASS: accuracy 0.78083; F1 0 |
+| R09 | Balanced logistic regression, threshold-0.5 metrics, and 0.10-0.90 sweep at <=0.02 steps | 1 | `part1_return_risk/train_return_risk.py` | Training report | PASS: best threshold 0.49 |
+| R10 | Balanced random forest with GridSearchCV, required grid, ROC-AUC scoring, and 5-fold StratifiedKFold | 1 | `part1_return_risk/train_return_risk.py` | CV/test report | PASS: CV 0.62552; test 0.63665 |
+| R11 | Compare impurity and held-out permutation importance; report top five and required features | 1 | `part1_return_risk/analyze_return_risk.py` | Importance report | PASS |
+| R12 | Subgroup precision/recall by category and payment method; identify weak subgroup and concrete remedy | 1 | `part1_return_risk/analyze_return_risk.py` | Subgroup report | PASS: Electronics recall 0.30952 |
+| R13 | Save final fitted tuned RF pipeline to `models/return_risk_model.pkl` | 1 | `part1_return_risk/train_return_risk.py` | Load artifact test | PASS |
+| R14 | Sweep RF probabilities and save actual `t*_rf` to machine-readable metadata | 1 | `part1_return_risk/train_return_risk.py` | Metadata inspection | PASS: t*=0.53 |
 | R15 | Fashion-MNIST 60,000/10,000 split with stratified validation >=5,000 | 2 | `part2_product_classifier/train_classifier.py`, `verify_splits.py` | Dataset/split report | PASS: 55,000/5,000/10,000 |
 | R16 | Grayscale-to-three-channel resize and ImageNet normalization | 2 | `part2_product_classifier/train_classifier.py`, `predict.py` | Transform inspection | PASS |
 | R17 | Pretrained ResNet-18 transfer learning with frozen backbone, Adam, documented configuration, and feature cache | 2 | `part2_product_classifier/train_classifier.py` | Training logs/artifacts | PASS: Stage A validation 0.9174 |
@@ -37,10 +37,10 @@ This matrix is derived from the supplied capstone brief. `BLOCKED` means the bri
 | R31 | Similarity-threshold groundedness refusal for unsupported policy questions | 3 | `part3_support_agent/agent.py` | Refusal transcript | PASS |
 | R32 | At least 8 transcripts generated from actual execution | 3 | `transcripts/` | Transcript generation command | PASS: 9 JSON transcripts |
 | R33 | At least 5 document-level Precision@3 and Recall@3 evaluations with arithmetic and averages | 3 | `knowledge_base/retrieval_eval.json` | Retrieval evaluation command | PASS: 5 queries |
-| R34 | Automated tests for artifacts, tools, routing, guardrails, state, schema, and retrieval | All | `tests/` | `pytest` | NOT STARTED |
-| R35 | Reproducible setup, configuration, logging, errors, and README | All | `README.md`, `.env.example`, package modules | Clean-environment run | NOT STARTED |
-| R36 | Final audit with PASS/FAIL/BLOCKED evidence for every criterion | All | `docs/FINAL_AUDIT.md` | Audit review | NOT STARTED |
-| R37 | Feature branch, >=2 meaningful commits, merge into main, and visible graph | All | Git history | `git log --graph --all` | NOT STARTED |
+| R34 | Automated tests for artifacts, tools, routing, guardrails, state, schema, and retrieval | All | `tests/` | `pytest -q` | PASS: 9 passed |
+| R35 | Reproducible setup, configuration, logging, errors, and README | All | `README.md`, `.env.example`, package modules | Commands documented and executed | PASS |
+| R36 | Final audit with PASS/FAIL/BLOCKED evidence for every criterion | All | `docs/FINAL_AUDIT.md` | Audit review | PASS |
+| R37 | Feature branch, >=2 meaningful commits, merge into main, and visible graph | All | Git history | `git log --graph --all` | PASS |
 
 ## Initialization Note
 

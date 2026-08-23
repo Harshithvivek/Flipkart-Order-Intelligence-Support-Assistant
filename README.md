@@ -16,6 +16,20 @@ python generate_orders.py
 
 The command creates `orders_dataset.csv` and prints deterministic shape and missingness checks.
 
+## Setup
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+The default agent mode is `MOCK_LLM`; it requires no API key or paid service. Build the local FAISS index before policy queries. The first retrieval run downloads `all-MiniLM-L6-v2` when it is not cached.
+
+## Part 1 Results
+
+The generated dataset contains 6,000 rows and 13 columns. The observed return rate is 0.2190, the rating missingness is MAR, and the COD versus non-COD missingness gap is 0.183144. The DummyClassifier has accuracy 0.78083 and returned-class F1 0.0. Random Forest CV ROC-AUC is 0.62552, held-out ROC-AUC is 0.63665, and the RF-specific threshold `t*_rf` is 0.53.
+
 ## Verified Results
 
 - Part 2: CUDA, 55,000 train / 5,000 validation / 10,000 test, validation accuracy 0.9174, test accuracy 0.9083.
@@ -29,6 +43,14 @@ python -m part3_support_agent.rag
 python -m part3_support_agent.eval_retrieval
 python -m part3_support_agent.run_transcripts
 ```
+
+## Testing
+
+```powershell
+pytest -q
+```
+
+The current suite covers dataset/model artifacts, dynamic tools, conditional routing, schema validation, injection blocking, groundedness refusal, state persistence/reset, and retrieval evaluation.
 
 ## Part 2 Rerun
 

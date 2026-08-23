@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any
 
 import joblib
+import numpy as np
 import pandas as pd
 
 from part2_product_classifier.predict import predict_product_image
@@ -21,7 +22,9 @@ def check_return_risk(order_features: dict) -> dict:
         raise FileNotFoundError("Return-risk model or threshold metadata is missing")
     model = joblib.load(MODEL_PATH)
     threshold = float(json.loads(THRESHOLD_PATH.read_text(encoding="utf-8"))["rf_threshold"])
-    probability = float(model.predict_proba(pd.DataFrame([order_features]))[0, 1])
+    feature_names = json.loads(THRESHOLD_PATH.read_text(encoding="utf-8"))["feature_columns"]
+    row = {feature: order_features.get(feature, np.nan) for feature in feature_names}
+    probability = float(model.predict_proba(pd.DataFrame([row], columns=feature_names))[0, 1])
     if probability < threshold:
         bucket = "Low"
     elif probability < threshold + 0.15:
