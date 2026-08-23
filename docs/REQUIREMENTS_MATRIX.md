@@ -18,13 +18,13 @@ This matrix is derived from the supplied capstone brief. `BLOCKED` means the bri
 | R12 | Subgroup precision/recall by category and payment method; identify weak subgroup and concrete remedy | 1 | `part1_return_risk/analyze_return_risk.py` | Subgroup report | NOT STARTED |
 | R13 | Save final fitted tuned RF pipeline to `models/return_risk_model.pkl` | 1 | `part1_return_risk/train_return_risk.py` | Load artifact test | NOT STARTED |
 | R14 | Sweep RF probabilities and save actual `t*_rf` to machine-readable metadata | 1 | `part1_return_risk/train_return_risk.py` | Metadata inspection | NOT STARTED |
-| R15 | Fashion-MNIST 60,000/10,000 split with stratified validation >=5,000 | 2 | `part2_product_classifier/train.py` | Dataset/split report | BLOCKED: full CPU run not completed |
-| R16 | Grayscale-to-three-channel resize and ImageNet normalization | 2 | `part2_product_classifier/utils.py` | Transform inspection | PASS: smoke validated |
-| R17 | Pretrained ResNet-18 transfer learning with frozen backbone, Adam, documented configuration, and feature cache | 2 | `part2_product_classifier/train.py` | Training logs/artifacts | BLOCKED: full CPU run not completed |
-| R18 | Fine-tune late layers only if validation accuracy is below 80%; report before/after actual values | 2 | `part2_product_classifier/train.py` | Training report | BLOCKED: depends on R17 |
-| R19 | Untouched test evaluation with accuracy, 10x10 confusion matrix, per-class metrics, and actual confusion pairs | 2 | `part2_product_classifier/evaluate.py` | Evaluation report | BLOCKED: model artifact unavailable |
-| R20 | Save reusable classifier to `models/product_classifier.pt` with `load_product_classifier()` and `predict_product_image()` | 2 | `part2_product_classifier/predict.py` | Model loading/prediction tests | IN PROGRESS: API implemented |
-| R21 | Export >=5 real Fashion-MNIST test images under `data/sample_images/` | 2 | `part2_product_classifier/evaluate.py` | File provenance check | BLOCKED: test evaluation not run |
+| R15 | Fashion-MNIST 60,000/10,000 split with stratified validation >=5,000 | 2 | `part2_product_classifier/train.py` | Dataset/split report | NOT STARTED: Part 2 reset |
+| R16 | Grayscale-to-three-channel resize and ImageNet normalization | 2 | `part2_product_classifier/utils.py` | Transform inspection | NOT STARTED: Part 2 reset |
+| R17 | Pretrained ResNet-18 transfer learning with frozen backbone, Adam, documented configuration, and feature cache | 2 | `part2_product_classifier/train.py` | Training logs/artifacts | NOT STARTED: Part 2 reset |
+| R18 | Fine-tune late layers only if validation accuracy is below 80%; report before/after actual values | 2 | `part2_product_classifier/train.py` | Training report | NOT STARTED: Part 2 reset |
+| R19 | Untouched test evaluation with accuracy, 10x10 confusion matrix, per-class metrics, and actual confusion pairs | 2 | `part2_product_classifier/evaluate.py` | Evaluation report | NOT STARTED: Part 2 reset |
+| R20 | Save reusable classifier to `models/product_classifier.pt` with `load_product_classifier()` and `predict_product_image()` | 2 | `part2_product_classifier/predict.py` | Model loading/prediction tests | NOT STARTED: Part 2 reset |
+| R21 | Export >=5 real Fashion-MNIST test images under `data/sample_images/` | 2 | `part2_product_classifier/evaluate.py` | File provenance check | NOT STARTED: Part 2 reset |
 | R22 | At least 12 policy documents, required coverage, and retained document/chunk IDs | 3 | `knowledge_base/policies.json` | KB validation | NOT STARTED |
 | R23 | Local MiniLM embeddings and FAISS index with reproducible build | 3 | `part3_support_agent/rag.py` | Index build/retrieval tests | NOT STARTED |
 | R24 | Dynamic return-risk tool loads fitted pipeline and RF threshold; no hardcoded predictions | 3 | `part3_support_agent/tools.py` | Tool tests | NOT STARTED |
